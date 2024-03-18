@@ -21,12 +21,30 @@ public class MainActivity extends AppCompatActivity {
 
         TimView();
         btnSpeed.setOnClickListener(moveSpeed);
+        btnDistance.setOnClickListener(moveDistance);
+        btnTime.setOnClickListener(moveTime);
     }
 
     View.OnClickListener moveSpeed = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, speed.class);
+            Intent intent = new Intent(MainActivity.this, SpeedActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    View.OnClickListener moveTime = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, TimeActivity.class);
+            startActivity(intent);
+        }
+    };
+
+    View.OnClickListener moveDistance = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, DistanceActivity.class);
             startActivity(intent);
         }
     };
