@@ -106,6 +106,7 @@ public class ManHinhDoiTien extends JFrame {
 		JButton btnButtonClear = new JButton("Clear");
 		btnButtonClear.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				textFieldVND.setText("");
 				textFieldUSD.setText("");
 				textFieldRUB.setText("");
 				textFieldEURO.setText("");
@@ -119,17 +120,13 @@ public class ManHinhDoiTien extends JFrame {
 	void DoiTien() {
 		double vnd = Double.parseDouble(textFieldVND.getText());
 		
-		double usd = vnd * 24_770;
-		double rub = vnd * 268.41;
-		double euro = vnd * 26_906.41;
+		double usd = vnd / 24770;
+		double rub = vnd / 268.41;
+		double euro = vnd / 26906.41;
 		
-		String txtusd = String.valueOf(usd);
-		String txtrub = String.valueOf(rub);
-		String txteuro = String.valueOf(euro);
-		
-		textFieldUSD.setText(txtusd);
-		textFieldRUB.setText(txteuro);
-		textFieldEURO.setText(txteuro);
+		textFieldUSD.setText(String.format("%.2f", usd));
+        textFieldRUB.setText(String.format("%.2f", rub));
+        textFieldEURO.setText(String.format("%.2f", euro));
 		
 	}
 }
