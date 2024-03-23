@@ -19,7 +19,7 @@ public class ManHinhDoiTien extends JFrame {
 	private JTextField textFieldVND;
 	private JTextField textFieldUSD;
 	private JTextField textFieldRUB;
-	private JTextField textFieldEUR;
+	private JTextField textFieldEURO;
 
 	/**
 	 * Launch the application.
@@ -70,25 +70,28 @@ public class ManHinhDoiTien extends JFrame {
 		lblNewLabel_2.setBounds(37, 113, 55, 13);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("EUR >");
+		JLabel lblNewLabel_3 = new JLabel("EURO >");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		lblNewLabel_3.setBounds(47, 147, 45, 13);
+		lblNewLabel_3.setBounds(37, 147, 55, 13);
 		contentPane.add(lblNewLabel_3);
 		
 		textFieldUSD = new JTextField();
+		textFieldUSD.setEditable(false);
 		textFieldUSD.setBounds(115, 77, 183, 19);
 		contentPane.add(textFieldUSD);
 		textFieldUSD.setColumns(10);
 		
 		textFieldRUB = new JTextField();
+		textFieldRUB.setEditable(false);
 		textFieldRUB.setBounds(115, 112, 183, 19);
 		contentPane.add(textFieldRUB);
 		textFieldRUB.setColumns(10);
 		
-		textFieldEUR = new JTextField();
-		textFieldEUR.setBounds(115, 146, 183, 19);
-		contentPane.add(textFieldEUR);
-		textFieldEUR.setColumns(10);
+		textFieldEURO = new JTextField();
+		textFieldEURO.setEditable(false);
+		textFieldEURO.setBounds(115, 146, 183, 19);
+		contentPane.add(textFieldEURO);
+		textFieldEURO.setColumns(10);
 		
 		JButton btnButtonChange = new JButton("Change");
 		btnButtonChange.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -103,5 +106,22 @@ public class ManHinhDoiTien extends JFrame {
 		btnButtonClear.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnButtonClear.setBounds(187, 209, 111, 21);
 		contentPane.add(btnButtonClear);
+	}
+	
+	void DoiTien() {
+		double vnd = Double.parseDouble(textFieldVND.getText());
+		
+		double usd = vnd * 24_770;
+		double rub = vnd * 268.41;
+		double euro = vnd * 26_906.41;
+		
+		String txtusd = String.valueOf(usd);
+		String txtrub = String.valueOf(rub);
+		String txteuro = String.valueOf(euro);
+		
+		textFieldUSD.setText(txtusd);
+		textFieldRUB.setText(txteuro);
+		textFieldEURO.setText(txteuro);
+		
 	}
 }
