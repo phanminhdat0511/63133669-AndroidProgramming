@@ -83,7 +83,6 @@ public class TimeActivity extends AppCompatActivity {
 
             String kq = String.valueOf(t) + " (giây)";
             thoigian.setText(kq);
-
         }
     });
 }
