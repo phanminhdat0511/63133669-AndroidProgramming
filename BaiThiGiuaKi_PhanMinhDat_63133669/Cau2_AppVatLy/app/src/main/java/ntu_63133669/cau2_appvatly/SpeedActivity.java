@@ -79,7 +79,6 @@ public class SpeedActivity extends AppCompatActivity {
 
             String kq = String.valueOf(t) + " (km/h)";
             khoangcach.setText(kq);
-
         }
     });
 }
