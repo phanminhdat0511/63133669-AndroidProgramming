@@ -19,7 +19,6 @@ public class DistanceActivity extends AppCompatActivity {
     Spinner spinnervantoc, spinnerthoigian;
     EditText vantoc, khoangcach, thoigian;
     Button nutTinh;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
