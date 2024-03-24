@@ -41,7 +41,7 @@ public class DistanceActivity extends AppCompatActivity {
         spinnerthoigian.setAdapter(adapterThoiGian);
 
         timView();
-        nutTinh.setOnClickListener(boLangNgheThoiGian);
+        nutTinh.setOnClickListener(boLangNgheKhoangCach);
     }
     void timView(){
         vantoc = (EditText) findViewById(R.id.edtSpeed);
@@ -50,19 +50,19 @@ public class DistanceActivity extends AppCompatActivity {
         nutTinh = (Button) findViewById(R.id.buttonKQ);
     }
 
-    View.OnClickListener boLangNgheThoiGian = (new View.OnClickListener() {
+    View.OnClickListener boLangNgheKhoangCach = (new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             EditText vantoc = findViewById(R.id.edtSpeed);
             EditText thoigian = findViewById(R.id.edtTime);
             EditText khoangcach  = findViewById(R.id.edtKQ);
             Spinner donviv = findViewById(R.id.spinnerSpeed);
-            Spinner donvis = findViewById(R.id.spinnerDistance);
+            Spinner donvit = findViewById(R.id.spinnerTime);
 
             double v1 = Double.parseDouble(vantoc.getText().toString());
             double t = Double.parseDouble(thoigian.getText().toString());
             String donviVanToc = donviv.getSelectedItem().toString();
-            String donviThoiGian = donvis.getSelectedItem().toString();
+            String donviThoiGian = donvit.getSelectedItem().toString();
 
             double s;
             if( donviVanToc.equals("m/s")){
