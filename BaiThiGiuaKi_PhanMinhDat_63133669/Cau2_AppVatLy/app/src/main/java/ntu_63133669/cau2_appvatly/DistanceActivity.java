@@ -15,15 +15,15 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
 
-public class TimeActivity extends AppCompatActivity {
-    Spinner spinnervantoc, spinnerkhoangcach;
+public class DistanceActivity extends AppCompatActivity {
+    Spinner spinnervantoc, spinnerthoigian;
     EditText vantoc, khoangcach, thoigian;
     Button nutTinh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_time);
+        setContentView(R.layout.activity_distance);
 
         spinnervantoc = (Spinner) findViewById(R.id.spinnerSpeed);
         ArrayList<String> vantoc = new ArrayList<>();
@@ -32,22 +32,21 @@ public class TimeActivity extends AppCompatActivity {
         ArrayAdapter<String> adapterVanToc = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, vantoc);
         spinnervantoc.setAdapter(adapterVanToc);
 
-        spinnerkhoangcach = (Spinner) findViewById(R.id.spinnerDistance);
-        ArrayList<String> khoangCach = new ArrayList<>();
-        khoangCach.add("km");
-        khoangCach.add("m");
-        ArrayAdapter<String> adapterKhoangCach = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, khoangCach);
-        spinnerkhoangcach.setAdapter(adapterKhoangCach);
+        spinnerthoigian = (Spinner) findViewById(R.id.spinnerTime);
+        ArrayList<String> thoigian = new ArrayList<>();
+        thoigian.add("h");
+        thoigian.add("m");
+        thoigian.add("s");
+        ArrayAdapter<String> adapterThoiGian = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, thoigian);
+        spinnerthoigian.setAdapter(adapterThoiGian);
 
         timView();
         nutTinh.setOnClickListener(boLangNgheThoiGian);
-
     }
-
     void timView(){
         vantoc = (EditText) findViewById(R.id.edtSpeed);
-        khoangcach = (EditText) findViewById(R.id.edtDistance);
-        thoigian = (EditText) findViewById(R.id.edtKQ);
+        thoigian = (EditText) findViewById(R.id.edtTime);
+        khoangcach = (EditText) findViewById(R.id.edtKQ);
         nutTinh = (Button) findViewById(R.id.buttonKQ);
     }
 
@@ -55,35 +54,39 @@ public class TimeActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             EditText vantoc = findViewById(R.id.edtSpeed);
-            EditText khoangcach = findViewById(R.id.edtDistance);
-            EditText thoigian  = findViewById(R.id.edtKQ);
+            EditText thoigian = findViewById(R.id.edtTime);
+            EditText khoangcach  = findViewById(R.id.edtKQ);
             Spinner donviv = findViewById(R.id.spinnerSpeed);
             Spinner donvis = findViewById(R.id.spinnerDistance);
 
             double v1 = Double.parseDouble(vantoc.getText().toString());
-            double s = Double.parseDouble(khoangcach.getText().toString());
+            double t = Double.parseDouble(thoigian.getText().toString());
             String donviVanToc = donviv.getSelectedItem().toString();
-            String donviKhoangCach = donvis.getSelectedItem().toString();
+            String donviThoiGian = donvis.getSelectedItem().toString();
 
-            double t;
+            double s;
             if( donviVanToc.equals("m/s")){
-                if(donviKhoangCach.equals("km")){
-                    t = (s / (v1 * 3.6)) * 3600;
+                if(donviThoiGian.equals("h")){
+                    s = (v1 * 3.6) * t;
                 }
+                else if(donviThoiGian.equals("m"))
+                    s = (v1 * 3.6) * (t / 60);
                 else
-                    t = ((s/1000) / (v1 * 3.6)) * 3600 ;
+                    s = (v1 * 3.6) * (t / 3600);
             }
             else{
-                if(donviKhoangCach.equals("km")){
-                    t = (s / v1) * 3600;
-                }
+                if(donviThoiGian.equals("h"))
+                    s = v1 * t;
+                else if(donviThoiGian.equals("m"))
+                    s = v1 * t / 60;
                 else
-                    t = ((s/1000) / v1) * 3600;
+                    s = v1 * t / 3600;
             }
 
-            String kq = String.valueOf(t) + " (giây)";
-            thoigian.setText(kq);
+            String kq = String.valueOf(s) + " (km)";
+            khoangcach.setText(kq);
 
         }
     });
+
 }
