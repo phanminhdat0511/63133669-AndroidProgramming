@@ -92,6 +92,16 @@ public class ManHinhDoiTien extends JFrame {
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(37, 147, 55, 13);
 		contentPane.add(lblNewLabel_3);
+		
+		JButton btnButtonChange = new JButton("Change");
+		btnButtonChange.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnButtonChange.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				DoiTien();
+			}
+		});
+		btnButtonChange.setBounds(66, 209, 111, 21);
+		contentPane.add(btnButtonChange);
 	}
 	
 	void DoiTien() {
