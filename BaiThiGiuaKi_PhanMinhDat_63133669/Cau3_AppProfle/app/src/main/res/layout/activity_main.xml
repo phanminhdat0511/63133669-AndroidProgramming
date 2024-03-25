@@ -169,7 +169,42 @@
             android:background="#EAC4C4"
             android:orientation="vertical"
             >
-
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Contact"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Phone: 0xxxx.xxxx.xx"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Mail: dat.pm.edu.vn"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Insta: .........."
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Fb: ........."
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="200dp"
