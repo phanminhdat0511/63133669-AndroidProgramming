@@ -49,6 +49,16 @@ public class ManHinhDoiTien extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("VND >");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel.setBounds(47, 41, 45, 13);
+		contentPane.add(lblNewLabel);
+		
+		textFieldVND = new JTextField();
+		textFieldVND.setBounds(115, 40, 183, 19);
+		contentPane.add(textFieldVND);
+		textFieldVND.setColumns(10);
 	}
 
 }
