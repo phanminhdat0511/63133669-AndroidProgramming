@@ -19,7 +19,7 @@
             android:name=".DistanceActivity"
             android:exported="false" />
         <activity
-            android:name=".speed"
+            android:name=".SpeedActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
