@@ -65,7 +65,7 @@ public class SpeedActivity extends AppCompatActivity {
                     v1 = (s/1000) / t;
                 else if(donviThoiGian.equals("m"))
                     v1 = (s/1000) / (t/60);
-                else if(donviThoiGian.equals("s"))
+                else 
                     v1 = (s/1000) / (t/3600);
             }
             else{
@@ -73,12 +73,12 @@ public class SpeedActivity extends AppCompatActivity {
                     v1 = (s) / t;
                 else if(donviThoiGian.equals("m"))
                     v1 = (s) / (t/60);
-                else if(donviThoiGian.equals("s"))
+                else
                     v1 = (s) / (t/3600);
             }
 
-            String kq = String.valueOf(t) + " (km/h)";
-            khoangcach.setText(kq);
+            String kq = String.valueOf(v1) + " (km/h)";
+            vantoc.setText(kq);
         }
     });
 }
