@@ -148,6 +148,37 @@
                     android:layout_marginStart="10dp"
                     />
             </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-Java"
+                android:layout_marginStart="10dp"
+                android:textSize="18dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        >
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:background="#EAC4C4"
+            android:orientation="vertical"
+            >
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:background="#EAC4C4"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp"
+            >
+
         </LinearLayout>
     </LinearLayout>
 
