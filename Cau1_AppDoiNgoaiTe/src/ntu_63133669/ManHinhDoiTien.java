@@ -59,6 +59,17 @@ public class ManHinhDoiTien extends JFrame {
 		textFieldVND.setBounds(115, 40, 183, 19);
 		contentPane.add(textFieldVND);
 		textFieldVND.setColumns(10);
+		
+		JLabel lblNewLabel_1 = new JLabel("$ USD >");
+		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_1.setBounds(37, 78, 55, 13);
+		contentPane.add(lblNewLabel_1);
+		
+		textFieldUSD = new JTextField();
+		textFieldUSD.setEditable(false);
+		textFieldUSD.setBounds(115, 77, 183, 19);
+		contentPane.add(textFieldUSD);
+		textFieldUSD.setColumns(10);
 	}
 
 }
