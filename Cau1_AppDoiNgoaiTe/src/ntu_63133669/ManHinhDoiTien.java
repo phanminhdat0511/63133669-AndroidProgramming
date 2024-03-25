@@ -92,6 +92,16 @@ public class ManHinhDoiTien extends JFrame {
 		textFieldEURO.setBounds(115, 146, 183, 19);
 		contentPane.add(textFieldEURO);
 		textFieldEURO.setColumns(10);
+		
+		JButton btnButtonChange = new JButton("Change");
+		btnButtonChange.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnButtonChange.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		btnButtonChange.setBounds(66, 209, 111, 21);
+		contentPane.add(btnButtonChange);
 	}
 
 }
