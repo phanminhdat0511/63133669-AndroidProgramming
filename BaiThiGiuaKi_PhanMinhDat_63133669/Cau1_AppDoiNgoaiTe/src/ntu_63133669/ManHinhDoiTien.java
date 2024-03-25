@@ -93,5 +93,18 @@ public class ManHinhDoiTien extends JFrame {
 		lblNewLabel_3.setBounds(37, 147, 55, 13);
 		contentPane.add(lblNewLabel_3);
 	}
+	
+	void DoiTien() {
+		double vnd = Double.parseDouble(textFieldVND.getText());
+		
+		double usd = vnd / 24770;
+		double rub = vnd / 268.41;
+		double euro = vnd / 26906.41;
+		
+		textFieldUSD.setText(String.format("%.2f", usd));
+        textFieldRUB.setText(String.format("%.2f", rub));
+        textFieldEURO.setText(String.format("%.2f", euro));
+		
+	}
 
 }
