@@ -16,6 +16,10 @@ public class ManHinhDoiTien extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
+	private JTextField textFieldVND;
+	private JTextField textFieldUSD;
+	private JTextField textFieldRUB;
+	private JTextField textFieldEURO;
 
 	/**
 	 * Launch the application.
