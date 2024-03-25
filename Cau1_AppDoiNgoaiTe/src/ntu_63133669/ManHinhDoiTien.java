@@ -97,7 +97,7 @@ public class ManHinhDoiTien extends JFrame {
 		btnButtonChange.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		btnButtonChange.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				DoiTien();
 			}
 		});
 		btnButtonChange.setBounds(66, 209, 111, 21);
