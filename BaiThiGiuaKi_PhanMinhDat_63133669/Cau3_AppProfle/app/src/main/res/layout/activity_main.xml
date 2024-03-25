@@ -230,7 +230,7 @@
                     android:layout_height="wrap_content"
                     android:text="- Badminton"
                     android:textSize="18dp"
-                    android:paddingEnd="7   dp"
+                    android:paddingEnd="7dp"
                     android:layout_marginStart="10dp"
                     />
                 <TextView
