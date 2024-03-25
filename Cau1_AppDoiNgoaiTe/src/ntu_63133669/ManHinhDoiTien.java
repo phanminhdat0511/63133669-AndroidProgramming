@@ -81,6 +81,17 @@ public class ManHinhDoiTien extends JFrame {
 		textFieldRUB.setBounds(115, 112, 183, 19);
 		contentPane.add(textFieldRUB);
 		textFieldRUB.setColumns(10);
+		
+		JLabel lblNewLabel_3 = new JLabel("EURO >");
+		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_3.setBounds(37, 147, 55, 13);
+		contentPane.add(lblNewLabel_3);
+		
+		textFieldEURO = new JTextField();
+		textFieldEURO.setEditable(false);
+		textFieldEURO.setBounds(115, 146, 183, 19);
+		contentPane.add(textFieldEURO);
+		textFieldEURO.setColumns(10);
 	}
 
 }
