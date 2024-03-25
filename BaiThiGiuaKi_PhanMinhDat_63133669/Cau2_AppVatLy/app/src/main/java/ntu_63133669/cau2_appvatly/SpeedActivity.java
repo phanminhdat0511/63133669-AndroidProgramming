@@ -65,7 +65,7 @@ public class SpeedActivity extends AppCompatActivity {
                     v1 = (s/1000) / t;
                 else if(donviThoiGian.equals("m"))
                     v1 = (s/1000) / (t/60);
-                else 
+                else
                     v1 = (s/1000) / (t/3600);
             }
             else{
