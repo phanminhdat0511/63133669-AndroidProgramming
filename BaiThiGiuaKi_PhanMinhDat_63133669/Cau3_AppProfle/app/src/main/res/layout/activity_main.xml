@@ -26,6 +26,39 @@
             android:src="@drawable/circle_frame"
             />
     </LinearLayout>
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MINH DAT PHAN"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:background="#EAC4C4"
+            android:orientation="vertical"
+            >
+            
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:background="#EAC4C4"
+            android:layout_marginStart="14dp"
+            >
+
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
