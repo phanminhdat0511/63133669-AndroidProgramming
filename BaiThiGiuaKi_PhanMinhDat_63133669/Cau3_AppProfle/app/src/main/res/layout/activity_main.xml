@@ -49,7 +49,49 @@
             android:background="#EAC4C4"
             android:orientation="vertical"
             >
-            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Information"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Sex: Male"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Age: 20"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Birth: Nov - 05 - 2003"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Job: undergraduate student"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- Country: Vietnam"
+                android:textSize="18dp"
+                android:layout_marginStart="10dp"
+                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="200dp"
