@@ -102,6 +102,19 @@ public class ManHinhDoiTien extends JFrame {
 		});
 		btnButtonChange.setBounds(66, 209, 111, 21);
 		contentPane.add(btnButtonChange);
+		
+		JButton btnButtonClear = new JButton("Clear");
+		btnButtonClear.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textFieldVND.setText("");
+				textFieldUSD.setText("");
+				textFieldRUB.setText("");
+				textFieldEURO.setText("");
+			}
+		});
+		btnButtonClear.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		btnButtonClear.setBounds(187, 209, 111, 21);
+		contentPane.add(btnButtonClear);
 	}
 
 }
