@@ -70,6 +70,17 @@ public class ManHinhDoiTien extends JFrame {
 		textFieldUSD.setBounds(115, 77, 183, 19);
 		contentPane.add(textFieldUSD);
 		textFieldUSD.setColumns(10);
+		
+		JLabel lblNewLabel_2 = new JLabel("P RUB >");
+		lblNewLabel_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		lblNewLabel_2.setBounds(37, 113, 55, 13);
+		contentPane.add(lblNewLabel_2);
+		
+		textFieldRUB = new JTextField();
+		textFieldRUB.setEditable(false);
+		textFieldRUB.setBounds(115, 112, 183, 19);
+		contentPane.add(textFieldRUB);
+		textFieldRUB.setColumns(10);
 	}
 
 }
