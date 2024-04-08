@@ -52,14 +52,15 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
         return lstData.size();
     }
 
-    class ItemLandHolder extends RecyclerView.ViewHolder{
+    class ItemLandHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         TextView tvCaption;
         ImageView ivLandScape;
 
         public ItemLandHolder(@NonNull View itemView) {
             super(itemView);
-            this.tvCaption = itemView.findViewById(R.id.textViewCaption);
-            this.ivLandScape = itemView.findViewById(R.id.imageViewLand);
+            tvCaption = itemView.findViewById(R.id.textViewCaption);
+            ivLandScape = itemView.findViewById(R.id.imageViewLand);
+            itemView.setOnClickListener(this);
         }
 
         public void onClick(View v){
