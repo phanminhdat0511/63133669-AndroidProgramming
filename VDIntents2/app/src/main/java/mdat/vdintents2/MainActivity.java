@@ -1,5 +1,6 @@
 package mdat.vdintents2;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(iChuyen, 8000);
     }
 
+    @SuppressLint("SuspiciousIndentation")
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if(requestCode == 8000){
@@ -33,11 +35,11 @@ public class MainActivity extends AppCompatActivity {
                 String hoten = data.getStringExtra("HT");
                 int namsinh = data.getIntExtra("NS", 2020);
 
-                TextView txtHT = (TextView) findViewById(R.id.edtHoTen);
-                TextView txtNS = (TextView) findViewById(R.id.edtNam);
+                TextView txtHT = (TextView) findViewById(R.id.txtHoTen);
+                TextView txtNS = (TextView) findViewById(R.id.txtNamSinh);
 
                 txtHT.setText(hoten);
-                txtNS.setText(namsinh);
+                txtNS.setText(String.valueOf(namsinh));
             }
             else
                 Toast.makeText(this, "Trả về thất bại", Toast.LENGTH_SHORT).show();
