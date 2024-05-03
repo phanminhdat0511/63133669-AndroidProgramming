@@ -1,6 +1,8 @@
 package mdat.loginapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,5 +16,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void Login(View v){
+        Intent iLogin = new Intent(this, LoginActivity.class);
+        startActivityForResult(iLogin, 7000);
+    }
+
+    public void Register(View v){
+        Intent iRegister = new Intent(this, RegisterActivity.class);
+        startActivityForResult(iRegister, 8000);
     }
 }
