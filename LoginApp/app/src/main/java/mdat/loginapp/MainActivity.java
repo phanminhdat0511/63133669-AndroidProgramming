@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void Login(View v){
         Intent iLogin = new Intent(this, LoginActivity.class);
-        startActivityForResult(iLogin, 7000);
+        startActivity(iLogin);
     }
 
     public void Register(View v){
         Intent iRegister = new Intent(this, RegisterActivity.class);
-        startActivityForResult(iRegister, 8000);
+        startActivity(iRegister);
     }
 }
