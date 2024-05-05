@@ -73,7 +73,7 @@
         app:srcCompat="@drawable/image1" />
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/editTextComfirm"
         android:layout_width="305dp"
         android:layout_height="35dp"
         android:layout_marginTop="12dp"
@@ -100,7 +100,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextText4"
+        android:id="@+id/editTextEmail"
         android:layout_width="305dp"
         android:layout_height="35dp"
         android:layout_marginTop="44dp"
@@ -111,7 +111,7 @@
         android:textSize="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextComfirm" />
 
     <TextView
         android:id="@+id/textView6"
@@ -125,10 +125,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextComfirm" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/editTextName"
         android:layout_width="305dp"
         android:layout_height="35dp"
         android:layout_marginTop="4dp"
@@ -155,7 +155,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/editTextPass"
         android:layout_width="305dp"
         android:layout_height="35dp"
         android:layout_marginTop="8dp"
@@ -176,6 +176,7 @@
         android:layout_marginTop="600dp"
         android:background="@drawable/button_border"
         android:fontFamily="@font/poppins_extrabold"
+        android:onClick="DangKy"
         android:text="Login"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
