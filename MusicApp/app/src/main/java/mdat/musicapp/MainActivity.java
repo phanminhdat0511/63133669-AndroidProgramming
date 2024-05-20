@@ -18,5 +18,13 @@ public class MainActivity extends AppCompatActivity {
 
         SQLiteDatabase dbMusic;
         dbMusic = openOrCreateDatabase("QLNhac.db", MODE_PRIVATE, null);
+
+        dbMusic.execSQL(
+                "CREATE TABLE MUSICS(id integer PRIMARY KEY," +
+                        "name text, " +
+                        "kind text," +
+                        "years integer," +
+                        "author text);"
+        );
     }
 }
