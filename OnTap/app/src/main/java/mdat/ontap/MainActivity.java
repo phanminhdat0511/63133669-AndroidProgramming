@@ -1,5 +1,6 @@
 package mdat.ontap;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
                     loadFragment(new HomeFragment(), false);
                 } else if (itemID == R.id.cau1) {
                     loadFragment(new Cau1Fragment(), false);
+
+                }   else if (itemID == R.id.cau2) {
+                     loadFragment(new Cau2Fragment(), false);
+
+                }   else if (itemID == R.id.cau3) {
+                    loadFragment(new Cau3Fragment(), false);
 
                 }
 
